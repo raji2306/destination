@@ -10,9 +10,12 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
+	<url>http://maven.apache.org</url>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -53,6 +56,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+          		  <configuration>
+              			<artifactItems>
+                		<artifactItem>
+                  		<groupId>com.github.jsimone</groupId>
+                  		<artifactId>webapp-runner</artifactId>
+                 		 <version>8.5.11.3</version>
+                 		 <destFileName>webapp-runner.jar</destFileName>
+               		 </artifactItem>
+             		 </artifactItems>
+           	 </configuration>
 			</plugin>
 		</plugins>
 	</build>
